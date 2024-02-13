@@ -55,7 +55,7 @@ export const Table = ({
 
 
 
-export const TableRow = ({
+export const Row = ({
     border,
     id,
     className,
@@ -107,7 +107,7 @@ export const TableRow = ({
   
 
 
-export const TableColumn = ({
+export const Col = ({
     type,
     border,
     id,
@@ -160,7 +160,7 @@ export const TableColumn = ({
   
 
 
-export const TableBody = ({
+export const TBody = ({
     border,
     id,
     className,
@@ -211,7 +211,7 @@ export const TableBody = ({
   };
   
 
-  export const TableHead = ({
+  export const THead = ({
     border,
     id,
     className,
@@ -261,7 +261,7 @@ export const TableBody = ({
     );
   };
 
-  export const TableFoot = ({
+  export const TFoot = ({
     border,
     id,
     className,
