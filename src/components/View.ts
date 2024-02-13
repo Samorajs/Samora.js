@@ -1,11 +1,15 @@
-import { h } from "../../node_modules/snabbdom/build/h";
-import { NavProps } from "../@types/NavType";
+import { ViewType, ViewProps } from "../@types/ViewType";
+import { h } from "snabbdom/build/h";
 import { normalizeStyleAttr } from "../helpers/string";
 
-export const Nav = ({
+export const View = ({
+  type,
   id,
   className,
+  dir,
+  lang,
   style,
+  xmlLang,
   onclick,
   ondblclick,
   onmousedown,
@@ -17,16 +21,20 @@ export const Nav = ({
   onkeypress,
   onkeyup,
   children,
-  ...customProps
-}: NavProps) => {
+  ...customAttrs
+}: ViewProps) => {
+
   return h(
-    "nav",
+    ViewType[type],
     {
       attrs: {
         id,
         class: className,
+        dir,
+        lang,
         ...(style ? { style: normalizeStyleAttr(style) } : {}),
-        ...customProps
+        "xml:lang": xmlLang,
+        ...customAttrs
       },
       on: {
         click: onclick,

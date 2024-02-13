@@ -1,15 +1,15 @@
-import { ViewType, ViewProps } from "../@types/ViewType";
 import { h } from "../../node_modules/snabbdom/build/h";
+import { LinkProps } from "../@types/LinkType";
 import { normalizeStyleAttr } from "../helpers/string";
 
-export const View = ({
+export const Link = ({
   type,
   id,
   className,
-  dir,
-  lang,
+  href,
+  target,
+  download,
   style,
-  xmlLang,
   onclick,
   ondblclick,
   onmousedown,
@@ -21,20 +21,21 @@ export const View = ({
   onkeypress,
   onkeyup,
   children,
-  ...customAttrs
-}: ViewProps) => {
+  ...customProps
+}: LinkProps) => {
+    
+    customProps.target = target;
+    customProps.download = download;
 
   return h(
-    ViewType[type],
+    "a",
     {
       attrs: {
         id,
         class: className,
-        dir,
-        lang,
-        style: style ? normalizeStyleAttr(style) : "",
-        "xml:lang": xmlLang,
-        ...customAttrs
+        href,
+        ...(style ? { style: normalizeStyleAttr(style) } : {}),
+        ...customProps
       },
       on: {
         click: onclick,

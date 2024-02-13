@@ -1,41 +1,45 @@
-import { View } from './src/components/Views';
+import { View } from './src/components/View';
 import "./index.css"
-import { Footer } from './src/components/Footer';
+import { List, ListItem } from './src/components/ListItem';
+import { Link } from './src/components/Link';
 import { Text } from './src/components/Text';
+import { Table, TableBody, TableColumn, TableHead, TableRow } from './src/components/Table';
 
 const App = () => {
-    return View({
-        type:"div",
-        style: {
-            backgroundColor: "red", 
-            width: "500px", 
-            height: "500px",
-            transform:"rotate(15deg)",
-            display:"flex",
-            justifyContent:"center",
-            alignItems:"center"
-        },
-        className: "red",
-        imo:"sjjsj",
-        onclick: () => alert("Hello"),
+    return Table({
+        border:"5px",
         children:[
-            View({
-                type:"aside",
-                style: {
-                    backgroundColor: "green", 
-                    width: "100px", 
-                    height: "100px",
-                    transform:"rotate(15deg)"
-                },
-                onmouseup: () => alert("Mouse is up"),
+            TableHead({
                 children:[
-                    Text({
-                        type:"p",
-                        children:"Hello world!",
-                        style:{background:"blue"}
+                    TableRow({
+                        children:[
+                            TableColumn({
+                                type:"th",
+                                children:"Nome"
+                            }),
+                            TableColumn({
+                                type:"th",
+                                children:"Apelido"
+                            })
+                        ]
                     })
                 ]
-
+            }),
+            TableBody({
+                children:[
+                    TableRow({
+                        children:[
+                            TableColumn({
+                                type:"td",
+                                children:"Braimo"
+                            }),
+                            TableColumn({
+                                type:"td",
+                                children:"Selimane"
+                            })
+                        ]
+                    })
+                ]
             })
         ]
     })

@@ -25,7 +25,7 @@ export const Footer = ({
       attrs: {
         id,
         class: className,
-        style: style ? normalizeStyleAttr(style) : "",
+        ...(style ? { style: normalizeStyleAttr(style) } : {}),
         ...customProps
       },
       on: {
