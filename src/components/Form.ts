@@ -1,5 +1,5 @@
 import { ViewType, ViewProps } from "../@types/ViewType";
-import { h } from "snabbdom/build/h";
+import { h } from "../../node_modules/snabbdom/build/h";
 import { normalizeStyleAttr } from "../helpers/string";
 import { FormInputProps, FormLabelProps, FormProps, FormSpecialInputProps } from "../@types/FormType";
 
