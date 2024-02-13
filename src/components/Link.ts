@@ -24,8 +24,7 @@ export const Link = ({
   ...customProps
 }: LinkProps) => {
     
-    customProps.target = target;
-    customProps.download = download;
+    customProps = { ...customProps, target,download }
 
   return h(
     "a",
