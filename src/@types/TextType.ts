@@ -1,6 +1,6 @@
 
 export interface TextProps { 
-    type: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "mark" | "strong" | "b" | "p" | "span" | "small" | "u" | "i" | "sub" | "sup" ,
+    type?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "mark" | "strong" | "b" | "p" | "span" | "small" | "u" | "i" | "sub" | "sup" ,
     id?: any,
     className?: any, 
     style?: any, 

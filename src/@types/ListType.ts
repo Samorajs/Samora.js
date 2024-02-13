@@ -1,6 +1,6 @@
 
 export interface ListProps { 
-    type: "ol" | "ul",
+    type?: "ol" | "ul",
     format: "1" | "a" | "A" | "i" | "I" | "circle" | "square" | "round",
     className?: any, 
     style?: any, 

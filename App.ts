@@ -4,43 +4,35 @@ import { List, ListItem } from './src/components/ListItem';
 import { Link } from './src/components/Link';
 import { Text } from './src/components/Text';
 import { Table, TBody, Col, THead, Row } from './src/components/Table';
+import { Checkbox, FilePicker, Form, Field, Label, Slider } from './src/components/Form';
+import { Divider } from './src/components/Divider';
 
 const App = () => {
-    return Table({
-        border:"5px",
+    return Form({
         children:[
-            THead({
-                children:[
-                    Row({
-                        children:[
-                            Col({
-                                type:"th",
-                                children:"Nome"
-                            }),
-                            Col({
-                                type:"th",
-                                children:"Apelido"
-                            })
-                        ]
-                    })
-                ]
+            Field({
+                hint:"Insira o seu nome",
+                value: "Braimo"
             }),
-            TBody({
-                children:[
-                    Row({
-                        children:[
-                            Col({
-                                type:"td",
-                                children:"Braimo"
-                            }),
-                            Col({
-                                type:"td",
-                                children:"Selimane"
-                            })
-                        ]
-                    })
-                ]
-            })
+            Divider({}),
+            Field({
+                type:"password",
+                hint:"Insira o seu nome",
+                value: "Braimo"
+            }),
+            Divider({}),
+            FilePicker({}),
+            Divider({}),
+            Label({
+                anchorTo:"checkbox",
+                children:"Click me"
+            }),
+            Checkbox({ id: "checkbox"}),
+            Field({
+                type:"submit",
+                value:"Entrar"
+            }),
+            Slider({})
         ]
     })
 }

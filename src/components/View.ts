@@ -25,7 +25,7 @@ export const View = ({
 }: ViewProps) => {
 
   return h(
-    ViewType[type],
+    ViewType[type ? type : "div"],
     {
       attrs: {
         id,

@@ -21,7 +21,7 @@ export const Text = ({
   ...customProps
 }: TextProps) => {
   return h(
-    type,
+    type ? type : "p",
     {
       attrs: {
         id,

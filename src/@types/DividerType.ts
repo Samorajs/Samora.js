@@ -1,6 +1,6 @@
 
 export interface DividerProps { 
-    type: "hr" | "br" ,
+    type?: "hr" | "br" ,
     id?: any,
     className?: any, 
     style?: any, 

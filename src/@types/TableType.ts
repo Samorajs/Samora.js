@@ -22,7 +22,7 @@ export interface TableProps {
 
 
 export interface TableColumnProps { 
-    type: "td" | "th",
+    type?: "td" | "th",
     id?: any,
     border?: string,
     className?: any, 

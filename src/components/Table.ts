@@ -23,7 +23,7 @@ export const Table = ({
   children,
   ...customAttrs
 }: TableProps) => {
-  customAttrs.border = border;
+  customAttrs = {...customAttrs, border};
 
   return h(
    "table",
@@ -75,7 +75,7 @@ export const Row = ({
     children,
     ...customAttrs
   }: TableProps) => {
-    customAttrs.border = border;
+    customAttrs = {...customAttrs, border};
   
     return h(
       "tr",
@@ -128,10 +128,10 @@ export const Col = ({
     children,
     ...customAttrs
   }: TableColumnProps) => {
-    customAttrs.border = border;
+    customAttrs = {...customAttrs, border};
   
     return h(
-    type,
+    type ? type : "td",
       {
         attrs: {
           id,
@@ -180,7 +180,7 @@ export const TBody = ({
     children,
     ...customAttrs
   }: TableProps) => {
-    customAttrs.border = border;
+    customAttrs = {...customAttrs, border};
   
     return h(
     "tbody",
@@ -231,7 +231,7 @@ export const TBody = ({
     children,
     ...customAttrs
   }: TableProps) => {
-    customAttrs.border = border;
+    customAttrs = {...customAttrs, border};
   
     return h(
     "thead",
@@ -281,7 +281,7 @@ export const TBody = ({
     children,
     ...customAttrs
   }: TableProps) => {
-    customAttrs.border = border;
+    customAttrs = {...customAttrs, border};
   
     return h(
     "tfoot",

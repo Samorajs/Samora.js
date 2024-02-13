@@ -10,7 +10,7 @@ export const Divider = ({
   onclick,
 }: DividerProps) => {
   return h(
-    type,
+    type ? type : "br",
     {
       attrs: style ? {
         id,

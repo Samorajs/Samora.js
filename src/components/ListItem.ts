@@ -22,7 +22,7 @@ export const List = ({
   ...customProps
 }: ListProps) => {
   return h(
-    type,
+    type ? type : "ul",
     {
       attrs: {
         id,

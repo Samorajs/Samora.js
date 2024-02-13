@@ -6,7 +6,7 @@ export const ViewType: any =  {
 }
 
 export interface ViewProps { 
-    type: "div" | "aside" | "section" | "article",
+    type?: "div" | "aside" | "section" | "article",
     id?: any,
     className?: any, 
     dir?: any, 
