@@ -1,0 +1,38 @@
+{
+  "name": "samorajs",
+  "version": "1.0.0",
+  "description": "Samorajs: Empowering Web Developers with Speed and Simplicity Samorajs is a cutting-edge JavaScript framework designed to accelerate web development and simplify building complex user interfaces. With a focus on performance, ease of use, and flexibility, Samorajs empowers developers to create stunning web applications with confidence.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samorajs/Samora.js.git"
+  },
+  "keywords": [
+    "Framework",
+    "Javascript",
+    "Typescript",
+    "UI",
+    "Frontend",
+    "Samora",
+    "SamoraJs",
+    "Js",
+    "Samora.js",
+    "Braimo",
+    "Thugger"
+  ],
+  "author": "Braimo Selimane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Samorajs/Samora.js/issues"
+  },
+  "homepage": "https://github.com/Samorajs/Samora.js#readme",
+  "dependencies": {
+    "snabbdom": "^3.6.2",
+    "vite": "^5.1.1"
+  }
+}
